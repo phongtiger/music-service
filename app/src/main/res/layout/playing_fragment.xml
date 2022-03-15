@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingHorizontal="2dp"
+        android:text="Heartless"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:paddingHorizontal="2dp"
+        android:text="The Weekend"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="200dp"
+        app:cardElevation="5dp">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_song"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_melody"
+        tools:ignore="ContentDescription" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="0dp"
+        android:progress="50"
+        android:progressBackgroundTint="@color/purple_200"
+        android:progressTint="@color/magentaLight"
+        android:thumbTint="@color/white" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:paddingHorizontal="2dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:paddingHorizontal="2dp"
+            android:text="--:--"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_cycle"
+            android:backgroundTint="@color/purple_100"
+            android:src="@drawable/ic_baseline_skip_previous"
+            app:tint="@color/white"
+            android:padding="10dp"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="50dp"
+            android:maxLevel="0"
+            android:background="@drawable/bg_cycle"
+            android:src="@drawable/ic_baseline_play"
+            app:tint="@color/purple_200"
+            tools:ignore="ContentDescription"
+            />
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_cycle"
+            android:backgroundTint="@color/purple_100"
+            android:src="@drawable/ic_baseline_skip_previous"
+            app:tint="@color/white"
+            android:padding="10dp"
+            android:rotation="180"
+            tools:ignore="ContentDescription" />
+    </TableRow>
+
+
+
+</LinearLayout>
