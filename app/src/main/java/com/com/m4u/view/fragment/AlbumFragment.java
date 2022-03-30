@@ -73,8 +73,12 @@ public class AlbumFragment extends BaseFragment<CommonViewModel, AlbumFragmentBi
     private void checkPermission() {
         if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(new String[]{
-                    Manifest.permission.READ_EXTERNAL_STORAGE
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE
+
+            }, 101);
+        } else if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.FOREGROUND_SERVICE)
+                != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{ Manifest.permission.FOREGROUND_SERVICE
             }, 101);
         } else {
             loadSongOffline();

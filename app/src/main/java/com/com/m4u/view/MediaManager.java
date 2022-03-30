@@ -134,6 +134,15 @@ public class MediaManager {
         }
     }
 
+    public void pause() {
+        try {
+            player.pause();
+            state = STATE_PLAYING;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public boolean isPlaying() {
         return state == STATE_PLAYING;
     }
